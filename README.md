@@ -1,5 +1,11 @@
 # Welcome to [Slidev](https://github.com/slidevjs/slidev)!
 
+This project was created with:
+```bash
+pnpm create slidev
+```
+
+## Getting started
 To start the slide show:
 
 - `npm install`
