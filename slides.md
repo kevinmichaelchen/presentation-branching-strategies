@@ -12,10 +12,9 @@ highlighter: shiki
 lineNumbers: false
 # some information about the slides, markdown enabled
 info: |
-  ## Slidev Starter Template
-  Presentation slides for developers.
+  ## Git branching strategy
+  Choosing a branching strategy to move quickly, efficiently, and safely
 
-  Learn more at [Sli.dev](https://sli.dev)
 # persist drawings in exports and build
 drawings:
   persist: false
@@ -197,17 +196,83 @@ may still be as good of a fit to your team as it has been to people in the last
 </div>
 </div>
 
-<style>
-.footnotes-sep {
-  @apply mt-20 opacity-10;
-}
-.footnotes {
-  @apply text-sm opacity-75;
-}
-.footnote-backref {
-  display: none;
-}
-</style>
+---
+
+# If not GitFlow, then what?
+
+<div grid="~ cols-2 gap-4">
+<div>
+
+<v-click>
+
+Constant, continuous feedback is ideal.
+We can't afford to wait too long to check if my changes work with yours.
+
+</v-click>
+
+<v-click>
+
+Branches, by definition, are designed to isolate and hide change.
+Continuous integration, by definition, is designed to expose change.
+
+</v-click>
+
+<v-click>
+
+GitHub Flow[^1] (aka plain old _feature branching_) is a good alternative.
+
+</v-click>
+
+<v-click>
+
+Farley encourages developers to merge directly into trunk, but that seems to
+subvert the Pull Request reviewing process. PRs are also useful for squashing
+commits and keeping trunk history tidy.
+
+</v-click>
+
+<br>
+<br>
+
+[^1]: [GitHub Flow](https://githubflow.github.io/)
+
+</div>
+<div class="mb-[-100px]">
+
+<Tweet id="1442448180323528704" scale="0.55" />
+
+</div>
+</div>
+
+---
+
+# What about marketing releases?
+
+<v-click>
+
+Long-lived branches are eschewed.
+
+Commits are flying into main branch.
+
+A robust testing suite inspires confidence.
+
+</v-click>
+
+<v-click>
+
+But what about work done towards a marketing release with a special launch date?
+
+What if a new feature isn't supposed to be enabled until the New Year, for example?
+
+</v-click>
+
+---
+layout: image
+image: https://source.unsplash.com/Rc0MCwu4Pg8/1920x1080
+class: text-center
+---
+
+#### Feature Flags
 
 ---
 layout: center
